@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BEEM — Business · Excellence · Enterprise · Management</title>
+  <meta name="description" content="BEEM es un grupo empresarial dedicado a la gestión, desarrollo tecnológico y franquicia de negocios en el sector de restaurantes, bares y eventos en Perú.">
+  <meta property="og:title" content="BEEM — Business · Excellence · Enterprise · Management">
+  <meta property="og:description" content="Gestión, tecnología y franquicias para el sector gastronómico.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://beem.pe">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 76'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23DAA520'/%3E%3Cstop offset='100%25' stop-color='%23B8860B'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='42,2 76,18 76,52 42,68 8,52 8,18' fill='none' stroke='url(%23g)' stroke-width='3'/%3E%3Ccircle cx='42' cy='20' r='7' fill='url(%23g)' opacity='.85'/%3E%3Cellipse cx='42' cy='34' rx='9' ry='7' fill='url(%23g)' opacity='.75'/%3E%3Cellipse cx='42' cy='50' rx='10' ry='9' fill='url(%23g)' opacity='.65'/%3E%3C/svg%3E">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --gold: #D4A843;
+      --gold-dark: #B8860B;
+      --gold-light: #E8D5A0;
+      --black: #0A0A0A;
+      --dark: #1A1A1A;
+      --gray: #888;
+      --white: #F5F5F0;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: var(--black);
+      color: var(--white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+
+    /* Subtle honeycomb background pattern */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(212,168,67,0.03) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 50%, rgba(184,134,11,0.03) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 680px;
+      padding: 60px 32px;
+      text-align: center;
+    }
+
+    /* Logo */
+    .logo-wrap {
+      margin-bottom: 48px;
+    }
+
+    .logo-wrap svg {
+      width: 320px;
+      max-width: 90%;
+      height: auto;
+    }
+
+    /* Divider */
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 auto 40px;
+    }
+
+    /* Description */
+    .description {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: #CCC;
+      margin-bottom: 48px;
+      letter-spacing: 0.3px;
+    }
+
+    .description strong {
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    /* Sectors */
+    .sectors {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 48px;
+    }
+
+    .sector-tag {
+      padding: 8px 20px;
+      border: 1px solid rgba(212,168,67,0.25);
+      border-radius: 24px;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      color: var(--gold);
+      text-transform: uppercase;
+      background: rgba(212,168,67,0.05);
+    }
+
+    /* Contact */
+    .contact {
+      margin-bottom: 24px;
+    }
+
+    .contact a {
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+
+    .contact a:hover {
+      color: var(--gold-light);
+    }
+
+    /* Location */
+    .location {
+      font-size: 13px;
+      color: var(--gray);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* Footer */
+    .footer {
+      position: relative;
+      z-index: 1;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .footer-line {
+      width: 120px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212,168,67,0.2), transparent);
+      margin: 0 auto 16px;
+    }
+
+    .footer p {
+      font-size: 12px;
+      color: #555;
+      letter-spacing: 0.5px;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .container { padding: 40px 20px; }
+      .description { font-size: 15px; }
+      .logo-wrap svg { width: 260px; }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+
+    <!-- Logo SVG inline -->
+    <div class="logo-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" role="img" aria-label="BEEM logo">
+        <defs>
+          <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#DAA520" />
+            <stop offset="100%" style="stop-color:#B8860B" />
+          </linearGradient>
+        </defs>
+        <g transform="translate(16, 8)">
+          <polygon points="42,2 76,18 76,52 42,68 8,52 8,18" fill="none" stroke="url(#goldGrad)" stroke-width="2.5"/>
+          <circle cx="42" cy="20" r="7" fill="url(#goldGrad)" opacity="0.85"/>
+          <ellipse cx="42" cy="34" rx="9" ry="7" fill="url(#goldGrad)" opacity="0.75"/>
+          <ellipse cx="42" cy="50" rx="10" ry="9" fill="url(#goldGrad)" opacity="0.65"/>
+          <line x1="34" y1="46" x2="50" y2="46" stroke="#1A1A1A" stroke-width="1.8" opacity="0.35"/>
+          <line x1="34" y1="52" x2="50" y2="52" stroke="#1A1A1A" stroke-width="1.8" opacity="0.35"/>
+          <ellipse cx="28" cy="30" rx="10" ry="5" fill="url(#goldGrad)" opacity="0.3" transform="rotate(-30 28 30)"/>
+          <ellipse cx="56" cy="30" rx="10" ry="5" fill="url(#goldGrad)" opacity="0.3" transform="rotate(30 56 30)"/>
+        </g>
+        <text x="110" y="55" font-family="'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="700" letter-spacing="8" fill="#F5F5F0">BEEM</text>
+        <text x="112" y="76" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="300" letter-spacing="3.8" fill="#B8860B">BUSINESS · EXCELLENCE · ENTERPRISE · MANAGEMENT</text>
+      </svg>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Description -->
+    <p class="description">
+      Somos un grupo empresarial peruano enfocado en la <strong>gestión, desarrollo tecnológico y franquicia</strong> de negocios en el sector gastronómico y de entretenimiento. Integramos operaciones, tecnología y administración para impulsar el crecimiento de nuestras marcas.
+    </p>
+
+    <!-- Sectors -->
+    <div class="sectors">
+      <span class="sector-tag">Restaurantes</span>
+      <span class="sector-tag">Bares</span>
+      <span class="sector-tag">Eventos</span>
+      <span class="sector-tag">Tecnología</span>
+      <span class="sector-tag">Consultoría</span>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact">
+      <a href="mailto:contacto@beem.pe">contacto@beem.pe</a>
+    </div>
+
+    <p class="location">Lima, Perú</p>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-line"></div>
+    <p>&copy; 2026 BEEM. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
